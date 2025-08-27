@@ -4,7 +4,7 @@
  Rolando M Majait
 
 -**Course/Year:**:
- BS Information Technology 3rd Year   
+ BS Information System 3rd Year   
 
 - **Fun Fact:** I can dance without music but feel the beats.
 
