@@ -10,7 +10,7 @@
         "preview": "vite preview",
         "predeploy": "npm run build",
         "deploy": "gh-pages -d dist",
-        "homepage": "https://github.com/rolandomajait1-rgb/appdev1/tree/main/appdev1-midterm-exam"
+        "homepage": "https://rolandomajait1-rgb.github.io/appdev1-midterm-exam/"
 
 
     },
