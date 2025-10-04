@@ -12,7 +12,6 @@ import './css/fontawesome.css';
 import './css/owl.css';
 import './css/templatemo-chain-app-dev.css';
 
-// Import images
 import Quote from './images/quote.png';
 import PricingTable01 from './images/pricing-table-01.png';
 
