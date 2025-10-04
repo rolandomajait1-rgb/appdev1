@@ -1,6 +1,26 @@
 import React from 'react';
 import './App.css';
 import Landzki from './assets/Landzki.jpg'
+import { useState } from "react";
+
+
+function Counter() {
+  const [count, setCount] = useState(0); // state variable
+
+  return (
+    <div className="p-10 text-center flex flex-col items-center grid gap-4">
+      <h1 className="text-2xl">Click: {count}</h1>
+      <button
+        onClick={() => setCount(count + 1)} // update triggers re-render
+        className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
+      >
+       you Clicked Me!
+      </button>
+    </div>
+  );
+}
+
+
 
 function MyButton() {
 
@@ -9,9 +29,9 @@ function MyButton() {
   };
     {/* You can add more functionality here */}
   return (
-    <button onClick={HandleClick} style={{padding: '10px 20px', fontSize: '1rem', 
+    <button onClick={HandleClick} style={{padding: '10px 40px', fontSize: '1rem', 
      cursor: 'pointer', borderRadius: '5px', border: 'none', backgroundColor: '#00bfe1ff',
-     color: '#fff', fontWeight: 'bold' }}>
+     color: '#fff',fontFamily: "'Roboto', sans-serif", fontWeight: 'bold' }}>
       Click for more info
     </button> 
   );
@@ -60,7 +80,7 @@ const MyStyle = {
  const  HeaderStyle = {
     fontSize: '2rem',
     marginBottom: '1rem',
-    fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+    fontFamily: "'Roboto', sans-serif",
     color: '#00bfe1ff',
     textAlign: 'center',
     marginTop: '20px',
@@ -93,8 +113,15 @@ function MyImage() {
     />
   );
 }
-function DataUser() {
 
+
+function DataUser() {
+  return (
+    <div>
+      <h2>User Information</h2>
+      {/* You can add more user-related information here */}
+    </div>
+  );
 }
 const User = {
   name: 'Landzki',
@@ -108,9 +135,44 @@ const User = {
 const IsLoggedIn = true; // Change to false to test the other condition
 const ClickForMoreInfo = true;
 
+
+function RenderingList() {
+const doings = [
+{ id: 1, title: "SLIPPING" },
+{ id: 2, title: "GAMING" },
+{ id: 3, title: "DANCING" },
+];
+
+
+return (
+<ul style={{ display: "flex", gap: "1rem",justifyContent:'center',alignItems:'center', listStyle: "none", padding: 0, margin: 0 }}>
+{doings.map((item) => (
+<li
+key={item.id}
+style={{
+border: "2px solid blueviolet",
+padding: "10px 80px",
+borderRadius: "8px",
+color: "white",
+fontWeight: "bold",
+textAlign: "center",
+fontFamily: "'Roboto', sans-serif",
+fontSize: '1.5rem',
+marginTop: '20px',
+background: 'linear-gradient(90deg, #4a6dedff, #b11efbff)',
+margin: '0',
+podding: '0',
+}}
+>
+{item.title}
+</li>
+))}
+</ul>
+);
+}
+
 function App() {
   
-
 
   return (
     <>
@@ -127,10 +189,7 @@ function App() {
     </div>
     <div style={{flexDirection:'row', alignItems: 'center', padding: '20px',top: '80%', position: 'absolute', width: '100%',fontFamily: "'Roboto', sans-serif",fontSize: '0.2rem', rowGap:'10px' }}>
       <h2 style={HeaderStyle}>About Me &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <MyButton /></h2>
-      
-       {/* Conditional rendering based on IsLoggedIn */}
-
-  
+      <h1><RenderingList/></h1>   
     </div>
     </>
   );

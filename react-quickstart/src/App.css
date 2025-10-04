@@ -4,7 +4,7 @@
     padding: 2rem;
     text-align: center;
     flex-grow: 1;
-    background: #000;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.311), rgba(0, 0, 0, 0.547));
 }
 
 @keyframes logo-spin {
