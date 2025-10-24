@@ -1,30 +1,30 @@
+import { People } from './utils/data.js';
+import { GetImageUrl } from './utils/utils.js';
+import './App.css';
 
-function Item({ name, isPacked }) {
-  return (
-    <li className="item">
-      {name} {isPacked && '✅'}
+export default function List() {
+  const listItems = People.map(person =>
+    <li className='list-item'
+        key={person.id}>
+      <img className='avatar'
+        src={GetImageUrl(person)}
+        alt={person.name}
+      />
+      <p className='list-item p'>
+        <b>{person.name}:</b>
+        {' ' + person.profession + ' '}
+        known for {person.accomplishment}
+      </p>
     </li>
   );
-}
 
-export default function PackingList() {
+
+
+  
   return (
-    <section>
-      <h1>Sally Ride's Packing List</h1>
-      <ul>
-        <Item
-          isPacked={true}
-          name="Space suit"
-        />
-        <Item
-          isPacked={true}
-          name="Helmet with a golden leaf"
-        />
-        <Item
-          isPacked={false}
-          name="Photo of Tam"
-        />
-      </ul>
-    </section>
+    <article className='scientists-container'>
+      <h1 className='scientists-container h2'>Scientists</h1>
+      <ul className='scientists-list'>{listItems}</ul>
+    </article>
   );
 }
