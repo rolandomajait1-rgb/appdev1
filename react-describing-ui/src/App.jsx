@@ -1,7 +1,8 @@
-import { rootGreet } from "./utils/RootModule.js";
+import {rootGreet} from "./utils/RootModule.js";
 import RootComponent from "./components/RootComponent.jsx";
 import './index.css';
-export default function App() {
+
+ function App() {
   rootGreet();
   RootComponent()
   return (
@@ -11,6 +12,7 @@ export default function App() {
     </div>
   );
 }
+export default App;
 
 
 
