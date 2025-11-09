@@ -1,0 +1,41 @@
+.scientists-container {
+    padding: 20px;
+    font-family: sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.scientists-container h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.scientists-list {
+    list-style: none;
+    padding: 0;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 20px;
+}
+
+.avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.list-item p {
+    margin: 0;
+    line-height: 1.4;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
