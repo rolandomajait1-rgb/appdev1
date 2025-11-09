@@ -1,7 +1,6 @@
 import './App.css'
 
 
-
 function Profile() {
   return (
     <img
@@ -10,6 +9,12 @@ function Profile() {
     />
   );
 }
+function Congratulations() {
+  return (
+     <h1>Good job!</h1>
+  );
+}
+
 
 export default function Gallery() {
   return (
@@ -18,6 +23,7 @@ export default function Gallery() {
       <Profile />
       <Profile />
       <Profile />
+      <Congratulations />
     </section>
   );
 }
