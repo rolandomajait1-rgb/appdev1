@@ -1,20 +1,23 @@
+import React from 'react';
 import './App.css';
 
-// 1. DEFINING A COMPONENT
-// This is the component definition, as per the slides.
+// 1. Rename the function to start with a capital letter
 function Profile() {
   return (
-    <h2>I am a new Profile Component!</h2>
+    <img
+      src="https://i.imgur.com/QIrZWGc.png"
+      alt="Alan L. Hart"
+    />
   );
 }
 
-function App() {
+export default function Gallery() {
   return (
-    <div>
-      <h1>My React App</h1>
-      {/* We will USE the component in the next step */}
-    </div>
+    <section>
+      <h1>Amazing scientists</h1>
+      <Profile />
+      <Profile />
+      <Profile />
+    </section>
   );
 }
-
-export default App;
