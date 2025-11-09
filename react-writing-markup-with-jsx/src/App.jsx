@@ -1,4 +1,4 @@
-import Profile from './assets/profile.jpg'
+import Profile from './components/Profile';
 import './App.css'
 
 export default function App() {
@@ -6,13 +6,15 @@ export default function App() {
     <div>
       <div className="intro">
         <h1>Welcome to my website!</h1>
-        <img src={Profile} alt="Katherine Johnson" />
       </div>
+         <Profile/>
+         <Profile/>
+         <Profile/>
       <p className="summary">
-         You can find my thoughts here.
+         You can find thoughts of science here.
         <br /><br />
         <b>And <i>pictures</i> of scientists!</b>
-        
+
       </p>
     </div>
   );
