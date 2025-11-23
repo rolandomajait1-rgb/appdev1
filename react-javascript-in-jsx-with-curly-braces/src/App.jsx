@@ -1,7 +1,4 @@
-import React from "react";
-
-
-
+import Css from './App.css'
 const baseUrl = 'https://i.imgur.com/';
 const person = {
   name: 'Gregorio Y. Zara',
