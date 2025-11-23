@@ -16,12 +16,13 @@ const person = {
 
 export default function TodoList() {
   return (
+    
     <div style={person.theme}>
-      <h1>{person}'s Todos</h1>
+      <h1>{person.name}'s Todos</h1>
       <img
         className="avatar"
-        src={baseUrl}
-        alt={name}
+        src={`${baseUrl}${person.imageId}${person.imageSize}.jpg`}
+        alt={person.name}
       />
       <ul>
         <li>Improve the videophone</li>
@@ -31,3 +32,4 @@ export default function TodoList() {
     </div>
   );
 }
+
