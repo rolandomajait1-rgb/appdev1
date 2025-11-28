@@ -12,7 +12,7 @@ function TodoItem ({ todo }) {
     dispatch(deleteTodo(todo.id));
   }
 return (
-    <li>
+    <li className="todo-item">
       <input type="checkbox" checked={todo.completed} onChange={toggleComplete} />
       <span style={{ textDecoration: todo.completed ? "line-through" : "none" }}>
         {todo.title}

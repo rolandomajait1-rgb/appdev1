@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Login () {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
     const [users, setUsers] = useState([])
+    const navigate = useNavigate()
 
     const SECRET = import.meta.env.VITE_APP_SECRET_PASSWORD
 
@@ -27,11 +29,11 @@ useEffect(() => {
         }
 
         localStorage.setItem("loggedInUser", JSON.stringify(foundUser))
-        window.location.href = "/todos"
+        navigate("/todos")
     }
 
 return (
-        <div>
+        <div className="page">
             <h2>Login</h2>
 
             <input type="text" placeholder="Enter username (E.g., Bret)" value={username} onChange={(e) => setUsername(e.target.value)} />

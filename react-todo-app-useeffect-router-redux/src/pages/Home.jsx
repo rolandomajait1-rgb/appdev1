@@ -1,9 +1,9 @@
 
 function Home () {
   return (
-    <div>
+    <div className="page text-center text-black">
       <h1>Welcome to the Todo App</h1>
-      <a href="/login">Go to Login</a>
+      <p>Manage your tasks efficiently with our simple todo application.</p>
     </div>
   )
 }

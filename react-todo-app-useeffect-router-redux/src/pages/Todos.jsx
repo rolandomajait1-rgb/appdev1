@@ -12,7 +12,7 @@ function Todos () {
     }, [dispatch])
 
     return (
-        <div>
+        <div className="page">
             <h1>Todos</h1>
             <AddTodoForm />
             <TodoList todos={todos} />
